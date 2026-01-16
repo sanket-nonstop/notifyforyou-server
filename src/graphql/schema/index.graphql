@@ -1,0 +1,9 @@
+#import "./test.graphql"
+
+type Query {
+  health: String!
+}
+
+type Mutation {
+  _noop: Boolean
+}

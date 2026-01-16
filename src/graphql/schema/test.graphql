@@ -1,0 +1,25 @@
+"""
+User-related GraphQL Test APIs
+"""
+type UserTest {
+  id: String!
+  username: String!
+  email: String!
+  firstName: String
+  lastName: String
+  bio: String
+}
+
+input UpdateProfileInputTest {
+  firstName: String
+  lastName: String
+  bio: String
+}
+
+extend type Query {
+  meTest: UserTest
+}
+
+extend type Mutation {
+  updateProfileTest(input: UpdateProfileInputTest!): UserTest
+}
